@@ -3,7 +3,7 @@
 	<h2><%= @product.title %></h2>
 	<div class="row-fluid">
 		<div class="span5">
-			<img src="http://getbootstrap.com/2.3.2/assets/img/bs-docs-twitter-github.png"/>
+			<img src="<%= @product.product_pictures[0].url rescue nil  %>"/>
 		</div>
 		<div class="span7 infos">
 			<p class="description"><%= @product.desc %></p>
@@ -13,7 +13,9 @@
 			<span class="categories">
 				<h5>Catégories</h5>
 				<ul>
-					<%= @product %>
+					<% @product.product_categories.each do |pc| %>
+						<li><%= pc.category.title %></li>
+					<% end %>
 				</ul>
 			</span>
 		</div>

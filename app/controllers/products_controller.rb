@@ -6,7 +6,7 @@ class ProductsController < ActionController::Base
   end
 
   def show
-    @product = Product.find(params[:id])
+    @product = Product.joins(:product_pictures).joins(:product_categories).find(params[:id])
     render :layout => "application"
   end
 
