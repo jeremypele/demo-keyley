@@ -1,6 +1,7 @@
 class ProductsController < ActionController::Base
   
-
+  before_filter :get_filters, :only => [:index] 
+  
   def index
     render :layout => "application"
   end
@@ -19,5 +20,12 @@ class ProductsController < ActionController::Base
       format.any  { render :json => response }
     end
   end
+
+
+  private
+
+    def get_filters
+      @categorys = Category.all
+    end
 
 end

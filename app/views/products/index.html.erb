@@ -1,11 +1,44 @@
-<h1>Mes produits</h1>
+<div  >
 
-<% Product.all.each do |product| %>
-	<div class="row-fluid">
-	    <h2><%= product.title %></h2>
-	    <p><%= product.desc %></p>
-	    <p>
-	    	<%= link_to "En savoir plus »", product_path(product) %>
-	    </p>
-	</div>
-<% end %>
+	<header ng-controller="filterCtrl">
+		<div class="row-fluid"/>
+			<div class="span6">
+				<div class="row-fluid"/>
+					<div class="span6">
+						<p>Filtrer</p>
+						<ul>
+						<% @categorys.each do |categ| %>
+							<li><input type="checkbox" ng-click="toggleFilter('<%=categ.id%>')"/><%= categ.title %></li>
+						<% end %>
+						<ul>
+					</div>
+					<div class="span6">
+						<p>Trier par:</p>
+						<ul>
+							<li><input type="checkbox" ng-click="setSortFilter('price')"/>Prix</li>
+							<li><input type="checkbox" ng-click="setSortFilter('weight')"/>Poids</li>
+						<ul>
+					</div>
+				</div>
+				<button ng-click='search()'>ok</button>
+			</div>
+
+			<div class="span6">
+				<input type="text" ng-model="fulltextSearch"/>
+				<button>ok</button>
+			</div>
+		</div>
+	</header>
+
+	<h1>Mes produits</h1>
+
+	<% Product.all.each do |product| %>
+		<div class="row-fluid">
+		    <h2><%= product.title %></h2>
+		    <p><%= product.desc %></p>
+		    <p>
+		    	<%= link_to "En savoir plus »", product_path(product) %>
+		    </p>
+		</div>
+	<% end %>
+</div>
