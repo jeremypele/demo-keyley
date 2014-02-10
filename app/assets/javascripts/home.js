@@ -1,31 +1,39 @@
 // Init app with dependencies
 var demoApp = angular.module('demoApp', []);
+
+demoApp.controller('mainCtrl', function($scope, ProductService) {
+  $scope.page = {}
+
+  $scope.$watch("page.products", function(val) {
+    console.log("it changed")
+    console.log(val)
+  })
+});
+
 demoApp.controller('filterCtrl', function($scope, ProductService) {
   // Every page can access this services
-  $scope.page = {
-    filters: [],
-    sortFilter: []
-  };
+  $scope.page.filters = [];
+  $scope.page.sortFilter = [];
+
 
   $scope.toggleFilter = function(filter) {
     var index = $scope.page.filters.indexOf(filter)
     if (index == -1)
       $scope.page.filters.push(filter);
     else
-      $scope.page.filters(index, 1);
+      $scope.page.filters.splice(index, 1);
   };
 
   $scope.setSortFilter = function(filter) {
     var index = $scope.page.sortFilter.indexOf(filter)
     if (index == -1)
-      $scope.page.sortFilterfilters.push(filter);
+      $scope.page.sortFilter.push(filter);
     else
-      $scope.page.sortFilter(index, 1);
+      $scope.page.sortFilter.splice(index, 1);
   };
 
-
   $scope.search = function() {
-    console.log($scope.page)
+    $scope.page.products = null;
 
     var params = {
       'categories': $scope.page.filters.join(','),
@@ -36,8 +44,10 @@ demoApp.controller('filterCtrl', function($scope, ProductService) {
       console.log("__Resultats")
       console.log(data)
       $scope.page.products = data;
+
     });
   }
+  $scope.search();
 });
 
 
@@ -65,4 +75,27 @@ demoApp.factory('ProductService', function($http) {
       });
     }
   };
+});
+
+
+demoApp.directive('product', function() {
+  return {
+    restrict: "E",
+    replace: true,
+    templateUrl: 'product-template.html',
+    link: function(scope, element, attrs) {
+
+      console.log("ici")
+      scope.getShowLink = function() {
+        console.log("___", scope.product)
+        return '/products/' + scope.product.id;
+      }
+
+      scope.getPix = function() {
+        return ''
+      }
+      // product.product_picture[0].url
+
+    }
+  }
 });

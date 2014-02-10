@@ -1,5 +1,4 @@
 <div >
-
 	<header ng-controller="filterCtrl">
 		<div class="row-fluid"/>
 			<div class="span6">
@@ -30,17 +29,42 @@
 		</div>
 	</header>
 
-	<h1>Mes produits</h1>
+	<div class="resultats">
 
-	<products></products>
+		<h1>Mes produits</h1>
 
-	<% Product.all.each do |product| %>
-		<div class="row-fluid">
-		    <h2><%= product.title %></h2>
-		    <p><%= product.desc %></p>
-		    <p>
-		    	<%= link_to "En savoir plus »", product_path(product) %>
-		    </p>
-		</div>
-	<% end %>
+		<product ng-repeat="product in page.products"></product>
+
+		<% Product.all.each do |product| %>
+			<!-- <div class="row-fluid">
+			    <h2><%= product.title %></h2>
+			    <p><%= product.desc %></p>
+			    <p>
+			    	<%= link_to "En savoir plus »", product_path(product) %>
+			    </p>
+			</div> -->
+		<% end %>
+
+	</div>
 </div>
+
+<!-- ng-tpl -->
+<script type="text/ng-template" id="product-template.html">
+    <div class="row-fluid">
+		<div class="span3">
+			<img ng-src="getPix()"/>
+		</div>
+		<div class="span4">
+			<h4>{{ product.title }}</h4>
+			<p>{{ product.desc }} </p>
+			<p>{{product.category_title}} </p>
+		</div>
+
+		<div class="span5">
+			<span>{{product.price}}{{product.price_unit}}</span>
+			<p>
+				<a ng-href="{{getShowLink()}}">En savoir plus »</a> 
+			</p>
+		</div>
+	</div>
+</script>

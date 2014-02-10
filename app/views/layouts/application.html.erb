@@ -7,27 +7,23 @@
     
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.js"></script>
 
-
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
 
     <%= yield :stylesheets %>
-    <%= yield :stylesheets %>
 
-    
+
   </head>
   <body ng-app="demoApp">
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
+     
+    <main role="main" ng-controller="mainCtrl">
        <%= render 'layouts/messages' %>
        
        <div class="container">
          <%= yield %>
        </div>
-       
+
     </main>
   </body>
 </html>
