@@ -13,7 +13,9 @@ Demo::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
-
+ 
+  match "products/get" => "products#get", :as => :get_products
+ 
 
   resources :products, :only => [:index, :show]
 
@@ -22,7 +24,6 @@ Demo::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => 'products#index'
 
-  
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
