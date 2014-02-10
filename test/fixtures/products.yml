@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  desc: MyText
+  price: 1.5
+  price_unit: MyString
+  weight: 1.5
+  weight_unit: MyString
+  position: 1
+  is_published: false
+
+two:
+  title: MyString
+  desc: MyText
+  price: 1.5
+  price_unit: MyString
+  weight: 1.5
+  weight_unit: MyString
+  position: 1
+  is_published: false
