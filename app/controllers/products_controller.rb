@@ -2,15 +2,15 @@ class ProductsController < ActionController::Base
   
 
   def index
+    render :layout => "application"
   end
 
   def show
+    @product = Product.find(params[:id])
+    render :layout => "application"
   end
 
-
   def get
-  	
-
   	response = Product.all
 
   	respond_to do |format|

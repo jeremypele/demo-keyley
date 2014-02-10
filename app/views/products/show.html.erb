@@ -1,0 +1,27 @@
+<a href="/">Retour à la recherche</a>
+<div class="product-wrapper">
+	<h2><%= @product.title %></h2>
+	<div class="row-fluid">
+		<div class="span5">
+			<img src="http://getbootstrap.com/2.3.2/assets/img/bs-docs-twitter-github.png"/>
+		</div>
+		<div class="span7 infos">
+			<p class="description"><%= @product.desc %></p>
+			<p class="weigth">Poids: <%= @product.weight %> <%= @product.weight_unit %></p>
+			<p class="price">Prix TTC: <%= @product.price %> <%= @product.price_unit %></p>
+
+			<span class="categories">
+				<h5>Catégories</h5>
+				<ul>
+					<%= @product %>
+				</ul>
+			</span>
+		</div>
+	</div>
+</div>
+
+
+<style>
+
+
+</style>

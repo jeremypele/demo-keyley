@@ -2995,3 +2995,1510 @@ Started GET "/products/get.json" for 127.0.0.1 at 2014-02-10 15:13:47 +0100
 Processing by ProductsController#get as JSON
   [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" 
 Completed 200 OK in 10.9ms (Views: 1.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/products" for 127.0.0.1 at 2014-02-10 15:17:15 +0100
+Processing by Admin::ProductsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "products" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "products" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "products" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" ORDER BY "products"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mProductCategory Load (0.3ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" [0m
+  [1m[35mProductPicture Load (0.3ms)[0m  SELECT "product_pictures".* FROM "product_pictures" 
+  Rendered /home/jpele/.bundler/ruby/1.9.1/active_admin-60d8be97ec2c/app/views/active_admin/resource/index.html.arb (411.3ms)
+Completed 200 OK in 492.6ms (Views: 408.5ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /active_admin.css - 304 Not Modified (42ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /jquery.ui.core.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /jquery.ui.widget.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /jquery.ui.button.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /jquery.ui.mouse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /jquery.ui.draggable.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /jquery.ui.position.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /jquery.ui.resizable.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /jquery.ui.dialog.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /jquery.ui.sortable.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /active_admin/base.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /active_admin/lib/batch_actions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /active_admin/lib/checkbox-toggler.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /active_admin/lib/dropdown-menu.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /active_admin/lib/has_many.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /active_admin/lib/modal_dialog.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /active_admin/lib/popover.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /active_admin/lib/table-checkbox-toggler.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /active_admin/ext/jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /active_admin/ext/jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /active_admin/application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-02-10 15:17:16 +0100
+Served asset /active_admin.js - 304 Not Modified (42ms)
+
+
+Started GET "/products/get.json" for 127.0.0.1 at 2014-02-10 15:17:17 +0100
+Processing by ProductsController#get as JSON
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Completed 200 OK in 2.1ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-10 15:17:21 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb (2.4ms)
+Completed 200 OK in 5.3ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-10 15:17:22 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb (1.4ms)
+Completed 200 OK in 3.8ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-10 15:17:23 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb (1.5ms)
+Completed 200 OK in 3.7ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-10 15:17:23 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb (1.2ms)
+Completed 200 OK in 2.8ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-10 15:19:43 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb (1.5ms)
+Completed 200 OK in 3.3ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-10 15:19:43 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb (1.2ms)
+Completed 200 OK in 3.2ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-10 15:20:52 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb (41.2ms)
+Completed 200 OK in 43.4ms (Views: 41.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/products" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Processing by Admin::ProductsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "products" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "products" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "products" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" ORDER BY "products"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mProductCategory Load (0.2ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" [0m
+  [1m[35mProductPicture Load (0.2ms)[0m  SELECT "product_pictures".* FROM "product_pictures" 
+  Rendered /home/jpele/.bundler/ruby/1.9.1/active_admin-60d8be97ec2c/app/views/active_admin/resource/index.html.arb (170.3ms)
+Completed 200 OK in 195.6ms (Views: 168.8ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /active_admin.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /jquery.ui.core.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /jquery.ui.widget.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /jquery.ui.button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /jquery.ui.mouse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /jquery.ui.draggable.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /jquery.ui.resizable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /jquery.ui.dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /jquery.ui.sortable.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /active_admin/base.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /active_admin/lib/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /active_admin/lib/checkbox-toggler.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /active_admin/lib/dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /active_admin/lib/has_many.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /active_admin/lib/modal_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /active_admin/lib/popover.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /active_admin/lib/table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /active_admin/ext/jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /active_admin/ext/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /active_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-02-10 15:20:54 +0100
+Served asset /active_admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/admin/products" for 127.0.0.1 at 2014-02-10 15:21:15 +0100
+Processing by Admin::ProductsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "products" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "products" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "products" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "products" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" ORDER BY "products"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mProductCategory Load (0.2ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" [0m
+  [1m[35mProductPicture Load (0.2ms)[0m  SELECT "product_pictures".* FROM "product_pictures" 
+  Rendered /home/jpele/.bundler/ruby/1.9.1/active_admin-60d8be97ec2c/app/views/active_admin/resource/index.html.arb (178.0ms)
+Completed 200 OK in 204.7ms (Views: 176.1ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-02-10 15:21:15 +0100
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:15 +0100
+Served asset /jquery.ui.widget.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:15 +0100
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:15 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:15 +0100
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:15 +0100
+Served asset /jquery.ui.button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-02-10 15:21:15 +0100
+Served asset /active_admin.css - 304 Not Modified (35ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /jquery.ui.mouse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /jquery.ui.draggable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /jquery.ui.resizable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /jquery.ui.dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /jquery.ui.sortable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /active_admin/lib/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /active_admin/base.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /active_admin/lib/dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /active_admin/lib/modal_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /active_admin/lib/has_many.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /active_admin/lib/checkbox-toggler.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /active_admin/ext/jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /active_admin/lib/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /active_admin/lib/table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /active_admin/ext/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /active_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Served asset /active_admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-10 15:21:16 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb (1.7ms)
+Completed 200 OK in 4.0ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-10 15:21:17 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb (1.3ms)
+Completed 200 OK in 3.2ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-10 15:21:17 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb (1.5ms)
+Completed 200 OK in 3.2ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-10 15:21:51 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 129.0ms
+
+ActionView::Template::Error (Invalid CSS after " */": expected selector or at-rule, was "= require_self"
+  (in /home/jpele/workspace/demo_keyley/app/assets/stylesheets/application.css.scss)):
+    5:     <title><%= content_for?(:title) ? yield(:title) : "Ma démo" %></title>
+    6:     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Demo" %>">
+    7:     
+    8:     <%= stylesheet_link_tag "application", media: "all" %>
+    9:     <%= javascript_include_tag "application" %>
+    10:     <%= csrf_meta_tags %>
+    11: 
+  app/assets/stylesheets/application.css.scss:15
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2816895484734287661_44774680'
+  app/controllers/products_controller.rb:6:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-10 15:22:10 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (9.7ms)
+Compiled bootstrap-responsive.css  (0ms)  (pid 1445)
+Compiled bootstrap-responsive.min.css  (0ms)  (pid 1445)
+Compiled bootstrap.css  (0ms)  (pid 1445)
+Compiled bootstrap.min.css  (0ms)  (pid 1445)
+WARNING on line 6 of /home/jpele/workspace/demo_keyley/app/assets/stylesheets/framework_and_overrides.css.scss: "img" failed to @extend ".img-responsive".
+  The selector ".img-responsive" was not found.
+  This will be an error in future releases of Sass.
+  Use "@extend .img-responsive !optional" if the extend should be able to fail.
+
+WARNING on line 18 of /home/jpele/workspace/demo_keyley/app/assets/stylesheets/framework_and_overrides.css.scss: ".column" failed to @extend ".col-md-6".
+  The selector ".col-md-6" was not found.
+  This will be an error in future releases of Sass.
+  Use "@extend .col-md-6 !optional" if the extend should be able to fail.
+
+WARNING on line 22 of /home/jpele/workspace/demo_keyley/app/assets/stylesheets/framework_and_overrides.css.scss: ".form" failed to @extend ".col-md-6".
+  The selector ".col-md-6" was not found.
+  This will be an error in future releases of Sass.
+  Use "@extend .col-md-6 !optional" if the extend should be able to fail.
+
+WARNING on line 25 of /home/jpele/workspace/demo_keyley/app/assets/stylesheets/framework_and_overrides.css.scss: ".form-centered" failed to @extend ".col-md-6".
+  The selector ".col-md-6" was not found.
+  This will be an error in future releases of Sass.
+  Use "@extend .col-md-6 !optional" if the extend should be able to fail.
+
+WARNING on line 31 of /home/jpele/workspace/demo_keyley/app/assets/stylesheets/framework_and_overrides.css.scss: ".submit" failed to @extend ".btn-lg".
+  The selector ".btn-lg" was not found.
+  This will be an error in future releases of Sass.
+  Use "@extend .btn-lg !optional" if the extend should be able to fail.
+
+Compiled framework_and_overrides.css  (1327ms)  (pid 1445)
+Compiled application.css  (1413ms)  (pid 1445)
+Compiled bootstrap/affix.js  (0ms)  (pid 1445)
+Compiled bootstrap/alert.js  (0ms)  (pid 1445)
+Compiled bootstrap/button.js  (0ms)  (pid 1445)
+Compiled bootstrap/carousel.js  (0ms)  (pid 1445)
+Compiled bootstrap/collapse.js  (0ms)  (pid 1445)
+Compiled bootstrap/dropdown.js  (0ms)  (pid 1445)
+Compiled bootstrap/tab.js  (0ms)  (pid 1445)
+Compiled bootstrap/transition.js  (0ms)  (pid 1445)
+Compiled bootstrap/scrollspy.js  (0ms)  (pid 1445)
+Compiled bootstrap/modal.js  (0ms)  (pid 1445)
+Compiled bootstrap/tooltip.js  (0ms)  (pid 1445)
+Compiled bootstrap/popover.js  (0ms)  (pid 1445)
+Compiled bootstrap.js  (84ms)  (pid 1445)
+Compiled application.js  (160ms)  (pid 1445)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 1690.8ms (Views: 1689.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2014-02-10 15:22:12 +0100
+Served asset /bootstrap-responsive.css - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-10 15:22:12 +0100
+Served asset /bootstrap.css - 200 OK (1ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-02-10 15:22:12 +0100
+Served asset /framework_and_overrides.css - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2014-02-10 15:22:12 +0100
+Served asset /bootstrap-responsive.min.css - 200 OK (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-02-10 15:22:12 +0100
+Served asset /active_admin.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-10 15:22:12 +0100
+Served asset /application.css - 200 OK (16ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-02-10 15:22:12 +0100
+Served asset /bootstrap.min.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /bootstrap/affix.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /bootstrap/alert.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /bootstrap/carousel.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /bootstrap/collapse.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /bootstrap/dropdown.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /bootstrap/tab.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /bootstrap/button.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /bootstrap/transition.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /bootstrap/scrollspy.js - 200 OK (30ms)
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /bootstrap/modal.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /bootstrap/tooltip.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /bootstrap.js - 200 OK (8ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /bootstrap/popover.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /jquery.ui.widget.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /jquery.ui.draggable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /jquery.ui.mouse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /jquery.ui.button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /jquery.ui.resizable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /jquery.ui.sortable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /active_admin/base.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /active_admin/lib/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /active_admin/lib/checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /jquery.ui.dialog.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /active_admin/lib/has_many.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /active_admin/lib/dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /active_admin/lib/modal_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /active_admin/lib/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /active_admin/lib/table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /active_admin/ext/jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /active_admin/ext/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /active_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /active_admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+Served asset /application.js - 200 OK (53ms)
+
+
+Started GET "/img/glyphicons-halflings.png" for 127.0.0.1 at 2014-02-10 15:22:13 +0100
+
+ActionController::RoutingError (No route matches [GET] "/img/glyphicons-halflings.png"):
+  actionpack (3.2.16) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.16) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.16) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.16) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.16) lib/rails/engine.rb:484:in `call'
+  railties (3.2.16) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.16) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-02-10 15:23:15 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered products/show.html.erb (0.2ms)
+Completed 200 OK in 2.1ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-02-10 15:23:59 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "1"]]
+#<Product:0x00000004f29ac8>
+  Rendered products/show.html.erb (0.0ms)
+Completed 200 OK in 12.0ms (Views: 2.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-02-10 15:24:23 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered products/show.html.erb (0.2ms)
+Completed 200 OK in 12.1ms (Views: 2.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-02-10 15:27:47 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered products/show.html.erb within layouts/application (0.5ms)
+Compiled application.css  (4ms)  (pid 1445)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 100.4ms (Views: 89.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /active_admin.css - 304 Not Modified (32ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap/carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap/button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap/affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap/alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap/transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap/dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap/collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap/tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap/scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap/modal.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap/tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /jquery.ui.widget.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /jquery.ui.button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /jquery.ui.mouse.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /jquery.ui.draggable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /jquery.ui.sortable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /jquery.ui.dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /jquery.ui.resizable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /active_admin/base.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /active_admin/lib/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /active_admin/lib/checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /active_admin/lib/has_many.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /active_admin/lib/dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /active_admin/lib/modal_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /active_admin/lib/table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /active_admin/ext/jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /active_admin/lib/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /active_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /active_admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /active_admin/ext/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-10 15:27:48 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered products/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 16.8ms (Views: 15.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /application.css - 304 Not Modified (41ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /active_admin.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap/affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap/button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap/alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap/carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap/transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap/dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap/tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap/collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap/scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap/modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap/tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /jquery.ui.button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /jquery.ui.widget.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /jquery.ui.mouse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /jquery.ui.draggable.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /jquery.ui.resizable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /jquery.ui.dialog.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /jquery.ui.sortable.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /active_admin/base.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /active_admin/lib/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /active_admin/lib/checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /active_admin/lib/dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /active_admin/lib/has_many.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /active_admin/lib/modal_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /active_admin/lib/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /active_admin/lib/table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /active_admin/ext/jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /active_admin/ext/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /active_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /active_admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:39 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered products/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 46.8ms (Views: 45.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /active_admin.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap/affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap/button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap/alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap/carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap/collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap/dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap/tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap/scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap/transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap/modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap/tooltip.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /bootstrap/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /jquery.ui.widget.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /jquery.ui.button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /jquery.ui.mouse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /jquery.ui.draggable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /jquery.ui.resizable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /jquery.ui.dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /jquery.ui.sortable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /active_admin/lib/batch_actions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /active_admin/lib/checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /active_admin/base.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /active_admin/lib/dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /active_admin/lib/modal_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /active_admin/lib/has_many.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /active_admin/lib/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /active_admin/lib/table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /active_admin/ext/jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /active_admin/ext/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /active_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /active_admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-10 15:28:52 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-02-10 15:29:18 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered products/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 17.0ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-10 15:29:18 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2014-02-10 15:29:18 +0100
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-02-10 15:29:18 +0100
+Served asset /active_admin.css - 304 Not Modified (35ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap/affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap/alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap/button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap/carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap/collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap/dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap/tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap/transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap/scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap/tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /bootstrap/modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /jquery.ui.core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /jquery.ui.datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /jquery.ui.widget.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /jquery.ui.button.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /jquery.ui.mouse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /jquery.ui.draggable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /jquery.ui.position.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /jquery.ui.resizable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /jquery.ui.dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /jquery.ui.sortable.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /active_admin/base.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /active_admin/lib/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /active_admin/lib/checkbox-toggler.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /active_admin/lib/dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /active_admin/lib/has_many.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /active_admin/lib/modal_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /active_admin/lib/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /active_admin/lib/table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /active_admin/ext/jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /active_admin/ext/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /active_admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /active_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-10 15:29:19 +0100
+Served asset /application.js - 304 Not Modified (2ms)
