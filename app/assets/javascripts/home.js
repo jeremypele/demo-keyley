@@ -10,7 +10,7 @@ demoApp.controller('filterCtrl', function($scope, ProductService) {
   $scope.toggleFilter = function(filter) {
     var index = $scope.page.filters.indexOf(filter)
     if (index == -1)
-      filters.push(filter);
+      $scope.page.filters.push(filter);
     else
       $scope.page.filters(index, 1);
   };
@@ -18,7 +18,7 @@ demoApp.controller('filterCtrl', function($scope, ProductService) {
   $scope.setSortFilter = function(filter) {
     var index = $scope.page.sortFilter.indexOf(filter)
     if (index == -1)
-      filters.push(filter);
+      $scope.page.sortFilterfilters.push(filter);
     else
       $scope.page.sortFilter(index, 1);
   };
@@ -26,13 +26,19 @@ demoApp.controller('filterCtrl', function($scope, ProductService) {
 
   $scope.search = function() {
     console.log($scope.page)
-    ProductService.get_products().then(function(data) {
 
-    })
+    var params = {
+      'categories': $scope.page.filters.join(','),
+      'sort': $scope.page.sortFilter.join(',')
+    }
+
+    ProductService.get_products(params).then(function(data) {
+      console.log("__Resultats")
+      console.log(data)
+      $scope.page.products = data;
+    });
   }
-
 });
-
 
 
 demoApp.factory('ProductService', function($http) {
@@ -42,13 +48,13 @@ demoApp.factory('ProductService', function($http) {
      */
     get_products: function(params) {
       var nb_products = 20,
-        request = "";
+        request = "",
+        product_api = '/products/get.json?';
 
       if (params) {
-        if (params["request"]) request = params["request"];
+        if (params["categories"]) product_api += '&categories=' + params["categories"];
+        if (params["sort"]) product_api += '&sort=' + params["sort"];
       }
-
-      var product_api = '/products/get.json?';
 
       return $http.get(product_api, {
         cache: false
